@@ -2,3 +2,7 @@
 /public/
 /resources/_gen/
 /themes/hyde/
+.DS_Store
+themes/thirdhand/assets/fonts/*
+static/fonts/*
+public/*
