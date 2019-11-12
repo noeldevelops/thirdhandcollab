@@ -196,6 +196,7 @@ footer .redirect {
 
 .portfolio-items {
 	padding: 1.5rem 1rem;
+	min-height: 350px;
 }
 
 .portfolio-items h5 >a {
