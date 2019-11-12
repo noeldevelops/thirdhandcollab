@@ -1,10 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Josefin+Sans:300,400,600,700|Josefin+Slab:400,700|Montserrat:300,400,800,900');
 
+/* Font Family = Noah. See details, incl Open Type features, here: https://www.fontfabric.com/fonts/noah/#Opentype-Features */
+
+@font-face {
+    font-family: 'Noah';
+    font-style: bold;
+    font-weight: 700;
+    src: 
+         url('/fonts/Noah-Bold.woff2') format('woff2'),
+         url('/fonts/Noah-Bold.woff') format('woff'),
+         url('/fonts/Noah-Bold.ttf') format('truetype'),
+         url('/fonts/Noah-Bold.eot') format('embedded-opentype');
+  }
+  
+  @font-face {
+    font-family: 'Noah';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+         url('/fonts/Noah-Regular.woff2') format('woff2'),
+         url('/fonts/Noah-Regular.woff') format('woff'),
+         url('/fonts/Noah-Regular.ttf') format('truetype'),
+         url('/fonts/Noah-Regular.eot') format('embedded-opentype');
+  }
+  @font-face {
+    font-family: 'Noah';
+    font-style: italic;
+    font-weight: 400;
+    src:
+         url('/fonts/Noah-RegularItalic.woff2') format('woff2'),
+         url('/fonts/Noah-RegularItalic.woff') format('woff'),
+         url('/fonts/Noah-RegularItalic.ttf') format('truetype'),
+         url('/fonts/Noah-RegularItalic.eot') format('embedded-opentype');
+  }
+
+
 body {
-	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	/*width: 100vw;*/
+	font-size: 16px;
+	font-family: 'Noah', 'Gill Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    font-feature-settings: "onum" 1, "pnum" 1, "kern" 1, "liga" 1;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
+    text-rendering: geometricPrecision;
+    letter-spacing: 0.015rem;
+    word-spacing: 0.001rem;
 	color: black;
 }
 
@@ -15,21 +58,15 @@ body > * {
 
 @media screen and (min-width: 750px) {
 	body {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 
-h1, h2, h3, h4 {
-	font-family: 'Josefin Slab', serif;
-	font-weight: 400;
-	margin-top: 1em;
-	text-transform: uppercase;
-}
-
-p {
-	font-family: inherit;
-	margin-top: 10px;
-}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noah', 'Gill Sans', sans-serif;
+    font-style: bold;
+    font-weight: 700;
+ }
 
 a {
 	text-decoration: none;
@@ -88,7 +125,7 @@ footer .redirect {
 
 .hero__text {
 	padding-top: 35vh;
-	font-family: 'Permanent Marker', cursive;
+	/* font-family: 'Permanent Marker', cursive; */
 	font-size: 1.5em;
 	line-height: 1;
 }
@@ -116,16 +153,18 @@ footer .redirect {
 	display: block;
 	margin: 1em auto 0;
 	width: 75%;
-	/*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 37%, rgba(255,255,255,0) 100%);
-background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 37%,rgba(255,255,255,0) 100%);
-background: radial-gradient(ellipse at center, rgba(255,255,255,1) 37%,rgba(255,255,255,0) 100%);*/
-
 }
+
+.nails {
+	fill: #ffffff;
+}
+
 .intro__subtitle {
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
 	font-weight: 900;
 	text-transform: none;
+	margin-top: 2rem;
 }
 @media screen and (min-width: 750px) {
 	header {
@@ -148,13 +187,15 @@ background: radial-gradient(ellipse at center, rgba(255,255,255,1) 37%,rgba(255,
 }
 
 .service-list li {
-	padding: 2em;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20px;
+	padding: 1em;
 	flex: 1 1 33%;
-	text-transform: uppercase;
-	font-weight: 900;
+	text-transform: capitalize;
+	/* font-weight: 900; */
 	background: repeat center url("../img/background-paper.jpg");
 	margin: 1em;
-	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
+	box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.68);
 }
 
 @media screen and (min-width: 949px) {
