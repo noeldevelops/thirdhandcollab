@@ -108,19 +108,8 @@ footer .redirect {
 /*section class="hero" */
 
 .hero {
-	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
-	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
-	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
+	background: no-repeat top center fixed url("../img/background.jpg");
 	background-size: cover;
-}
-
-@media screen and (min-width:780px) {
-	.hero {
-		background: -moz-radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
-		background: -webkit-radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
-		background: radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
-		background-size: cover;
-	}
 }
 
 .hero__text {
