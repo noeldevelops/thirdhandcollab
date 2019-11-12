@@ -178,11 +178,10 @@ footer .redirect {
 .service-list li {
 	font-family: 'Permanent Marker', cursive;
 	font-size: 20px;
-	padding: 1em;
+	padding: 0.7em;
 	flex: 1 1 33%;
 	text-transform: capitalize;
-	/* font-weight: 900; */
-	background: repeat center url("../img/background-paper.jpg");
+    background: repeat #c4bdb0 url("/img/natural-paper.png");
 	margin: 1em;
 	box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.68);
 }
