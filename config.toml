@@ -1,0 +1,4 @@
+baseURL = "http://thirdhandcollaborative.com/"
+languageCode = "en-us"
+title = "Third Hand Collaborative, web development services"
+theme = "thirdhandtheme"

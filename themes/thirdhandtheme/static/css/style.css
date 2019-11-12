@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Josefin+Sans:300,400,600,700|Josefin+Slab:400,700|Montserrat:300,400,800,900');
+
+body {
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	/*width: 100vw;*/
+	color: black;
+}
+
+body > * {
+	/*width: 100vw;*/
+	overflow-x: hidden;
+}
+
+@media screen and (min-width: 750px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Josefin Slab', serif;
+	font-weight: 400;
+	margin-top: 1em;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: inherit;
+	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+	/*color: inherit;*/
+}
+ button {
+	 border: 1px solid #1EAEDB;
+ }
+
+/*redirect to playfolio*/
+.redirect {
+	display: none;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	background-color: #FFF;
+	color: #000;
+	padding: 2vmin 1em;
+	text-align: left;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+footer .redirect {
+	display: block;
+	color: #FFF;
+	font-weight: 300;
+	padding-bottom: 1em;
+	background-color: inherit;
+	text-align: center;
+}
+.redirect--playfolio-text {
+	font-family: 'Permanent Marker', cursive;
+}
+
+@media screen and (min-width: 750px) {
+	.redirect {
+		display: block;
+	}
+}
+
+/*section class="hero" */
+
+.hero {
+	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
+	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
+	background: no-repeat top center fixed url("../img/backgroundfull_sm.jpg");
+	background-size: cover;
+}
+
+@media screen and (min-width:780px) {
+	.hero {
+		background: -moz-radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
+		background: -webkit-radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
+		background: radial-gradient(ellipse at center, rgba(180,168,157,.9) 17%,rgba(180,168,157,.6) 25%,rgba(180,168,157,.3) 61%,rgba(180,168,157,0) 90%), no-repeat top center fixed url("../img/backgroundfull.jpg");
+		background-size: cover;
+	}
+}
+
+.hero__text {
+	padding-top: 35vh;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.5em;
+	line-height: 1;
+}
+.hero__text--dontfit {
+	font-size: 1.25em;
+	line-height: 1.25em;
+	white-space: nowrap;
+}
+
+#hero__text--crafted {
+	font-size: 3em;
+	font-weight: 900;
+	line-height: 1.0;
+	padding-bottom: 1em;
+}
+
+/*section class="intro" */
+
+.intro {
+	background-color: inherit;
+	padding-top: 2em;
+}
+
+.logo {
+	display: block;
+	margin: 1em auto 0;
+	width: 75%;
+	/*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 37%, rgba(255,255,255,0) 100%);
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 37%,rgba(255,255,255,0) 100%);
+background: radial-gradient(ellipse at center, rgba(255,255,255,1) 37%,rgba(255,255,255,0) 100%);*/
+
+}
+.intro__subtitle {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	text-transform: none;
+}
+@media screen and (min-width: 750px) {
+	header {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	}
+
+	.intro__subtitle {
+		font-size: 2.5em;
+	}
+}
+/*section class="services"*/
+.service-list {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.service-list li {
+	padding: 2em;
+	flex: 1 1 33%;
+	text-transform: uppercase;
+	font-weight: 900;
+	background: repeat center url("../img/background-paper.jpg");
+	margin: 1em;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
+}
+
+@media screen and (min-width: 949px) {
+	.service-list li {
+		flex: 0 1 25%;
+	}
+}
+
+/*section class showcase */
+
+.portfolio-items {
+	margin: 0 auto;
+	overflow: hidden;
+	align-self: center;
+}
+
+.portfolio-items h5 >a {
+	color: black;
+	font-weight: 800;
+}
+
+.work-screenshot {
+	max-width: 100%;
+	box-shadow: 6px 6px 15px #666;
+}
+
+/*education*/
+.education {
+	display: none;
+}
+
+/*footer */
+footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding-top: 1.5em;
+}
+
+ul#socialmedia {
+	list-style: none;
+	display: inline-flex;
+	margin: 0 auto;
+}
+
+#socialmedia > li {
+	margin: 0 auto;
+	padding: 0 1rem;
+	font-size: 2em;
+}
+
+@media screen and (min-width:780px) {
+	#socialmedia > li {
+		padding: 0 2rem;
+	}
+}
+
+#socialmedia a {
+	color: white;
+}
+
+#credit {
+	color: #999;
+	font-size: .8em;
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+		<title>
+      Third Hand
+    </title>
+		<meta name="description" content="Website Design and Development">
+  	<meta name="author" content="Noel Cothren">
+		<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS - skeleton + my own
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+	</head>
+	<body>
+		<div class="redirect">
+			Looking for more code? Check out my <a href="http://github.com/noeldevelops" target="_blank">github account</a> or <a href="http://noeldevelops.com" target="_blank">my <span class="redirect--playfolio-text">playfolio</span> at noeldevelops.com</a>
+		</div>
+		<section class="hero">
+			<div class="container">
+					<header class="row">
+						<div class="logo">
+							<img class="img-center" src="img/logo.svg" />
+						</div>
+						<div class="twelve columns">
+							<h2 class="twelve columns intro__subtitle">Handcrafted Websites for Humans.</h2>
+						</div>
+					</header>
+			</div>
+		</section>
+		<section class="intro">
+			<div class="container">
+				<div class="row">
+				<div class="twelve columns">
+					<p>Third Hand helps regular folk like yourself create an online presence that shows off your products, your skills, or just your bad-a&amp;$ blog posts. We're a web development studio with handmade roots, helping people reach audiences near and far, even if the budget is tight. We think your website deserves personal attention from experienced human professionals, and it shouldn't drain your rainy day fund.</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- .intro -->
+	<section class="services">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h4>Services</h4>
+					<p>We work to provide a range of affordable custom web services for all project sizes and depths.</p>
+					<ul class="service-list">
+						<li>full-service web design &amp; development</li>
+						<li>maintenance &amp; updates for existing sites</li>
+						<li>content planning and creation</li>
+						<li>budget-friendly custom templates</li>
+						<li>no-hassle web packages</li>
+					</ul>
+					<p>Don't scare potential customers off with outdated, poor-quality content, a website that doesn't "work", or worse, no website at all!</p>
+					<p>Fix the mistakes that keep people from finding you online. Be sure you're reaching the people who are looking for you - <em>and</em> people who didn't realize how much they needed you. </p>
+					<p>Learn to create, update or maintain the site of your dreams - all by yourself, or with a minimal amount of hand-holding</p>
+					<button><a href="#contact-form">Start Today</a></button>
+				</div>
+			</div>
+		</div>
+	</section><!-- .services -->
+	<section class="showcase">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h4>Recent Work</h4>
+					{{ range where .Data.Pages "Section" "work" }}
+	        <div class="portfolio-items eight columns offset-by-two">
+						<a href="{{.Params.sitelink}}">
+							<img class="work-screenshot" src="{{.Params.img}}" alt="screenshot">
+						</a>
+
+						<p>{{.Summary}}</p>
+						<hr />
+	        </div>
+
+    			{{ end }}
+				</div>
+			</div>
+		</div>
+	</section> <!-- .showcase -->
+	<section class="process">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h4 id="contact-form">Get in Touch!</h4>
+					<p>We're committed to helping you create the website of your dreams. If you're ready to upgrade your online presence, simply fill out the Project Interest Form at the link below.</p>
+					<h5>The Painless Process</h5>
+					<ol>
+						<li>You click the button &amp; tell me more about you and your project.</li>
+						<li>We schedule a live pow-wow to discuss details.</li>
+						<li>I research and prepare a detailed proposal for your approval.</li>
+						<li>We work together to make your dream site real.</li>
+					</ol>
+					<button id="submit"><a href="https://goo.gl/forms/tBJ0ER3UZFV9fZz42" target="_blank">Project Interest Form</a></button>
+				</div>
+			</div>
+		</div>
+	</section> <!-- .process -->
+	<section class="education">
+		<div class="container">
+			<div class="row">
+				<div class="educate-yrself twelve columns">
+					<h4>Educate Yourself</h4>
+					<p>If you're a brave DIYer (guys and gals after our own hearts!), we also offer learning opportunities so you can create, update or maintain the site of your dreams all by yourself, or with a minimal amount of hand-holding.</p>
+					<p> Whether it's help customizing one of those pesky free templates we mentioned earlier, or uploading new product photos to your woo-commmerce site, learning how to Do It Yourself could potentially save thousands in fees.</p>
+					<p>We offer private lessons or group workshops, and occasionally write free, easy-to-follow guides, tutorials, and articles.</p>
+				</div>
+				<div class="five columns">
+					<p><strong>Wanna learn more?</strong> <a href="#contact-form">Get in touch</a> for more information about lessons, or sign up for our tutorial newsletter (coming soon)!</p>
+					</div>
+				<div class="four columns">
+					<form id="newsletter-signup" class="six columns">
+						<label for="exampleEmailInput">Your Email</label>
+						<input class="u-full-width" type="email" placeholder="you@yourinbox.com" id="exampleEmailInput">
+						<button type="submit" id="signup" value="signup">Sign Up</button>
+					</form>
+				</div>
+			</div> <!-- row -->
+		</div>
+	</section><!-- .education -->
+	<section class="about">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h4>About</h4>
+					<p>Third Hand Collaborative, LLC is a tiny company founded in 2017 by me, Noel Cothren. We work with clients from all over the US from our home base in Albuquerque, New Mexico, USA. My ever-growing coding skills plus years of experience in the arts, customer service, and education guide me in all aspects of running the business. </p>
+					<h5>Collaborative?!?</h5>
+					<p>For many website projects I work on my own, but I've curated a small community of collaborators that back me up when I need it. They are friends of mine &#8212; other creative professionals, all seriously dedicated to making great things with other humans. If you dig collaboration and digital craftsmanship and want to be a part of this community we're building, let me know!</p>
+				</div>
+			</div>
+		</div>
+	</section><!-- .about -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<section class="social">
+						<ul id="socialmedia">
+							<li><a href="https://www.instagram.com/noeynoeinoee/?hl=en" target="_blank" alt="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.pinterest.com/anc02d/" target="_blank" alt="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/noeldevelops" target="_blank" alt="github"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/noel-cothren-8517bb16/" target="_blank" alt="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="https://twitter.com/noeldevelops" target="_blank" alt="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</section>
+					<div class="twelve columns redirect">
+						Looking for more code? Check out my <a href="http://github.com/noeldevelops" target="_blank">github account</a> or <a href="http://noeldevelops.com" target="_blank">my <span class="redirect--playfolio-text">playfolio</span> at noeldevelops.com</a>
+					</div>
+						<p id="credit">This site was built for speed, with <i class="fa fa-heart" aria-hidden="true"></i> . . . and help from <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="http://getskeleton.com/" target="_blank"> Skeleton</a>.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</body>
+</html>
