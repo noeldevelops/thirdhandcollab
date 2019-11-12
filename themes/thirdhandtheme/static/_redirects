@@ -1,0 +1,2 @@
+# For Netlify: Redirect domain alias to primary domain
+https://thirdhandcollab.com/* https://thirdhandcollaborative.com/:splat 301!
