@@ -3,7 +3,4 @@
 /resources/_gen/
 /themes/hyde/
 .DS_Store
-themes/thirdhandtheme/assets/fonts/*
-static/fonts/*
 public/*
-themes/thirdhandtheme/static/fonts/*
