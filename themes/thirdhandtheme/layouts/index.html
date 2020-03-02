@@ -75,7 +75,7 @@
 				</div>
 					{{ range where .Data.Pages "Section" "work" }}
 				<div class="portfolio-items five columns">
-					<a target="_blank" href="{{.Params.sitelink}}">
+					<a rel="noreferrer" target="_blank" href="{{.Params.sitelink}}">
 						<img class="work-screenshot" src="{{.Params.img}}" alt="screenshot">
 					</a>
 					<!-- <p>{{.Summary}}</p> -->
