@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Josefin+Sans:300,400,600,700|Josefin+Slab:400,700|Montserrat:300,400,800,900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 /* Font Family = Noah. See details, incl Open Type features, here: https://www.fontfabric.com/fonts/noah/#Opentype-Features */
 
 @font-face {
     font-family: 'Noah';
-    font-style: bold;
+	font-style: bold;
+	font-display: swap;
     font-weight: 700;
     src: 
          url('/fonts/Noah-Bold.woff2') format('woff2'),
@@ -15,7 +16,8 @@
   
   @font-face {
     font-family: 'Noah';
-    font-style: normal;
+	font-style: normal;
+	font-display: swap;
     font-weight: 400;
     src: 
          url('/fonts/Noah-Regular.woff2') format('woff2'),
@@ -26,7 +28,8 @@
   @font-face {
     font-family: 'Noah';
     font-style: italic;
-    font-weight: 400;
+	font-weight: 400;
+	font-display: swap;
     src:
          url('/fonts/Noah-RegularItalic.woff2') format('woff2'),
          url('/fonts/Noah-RegularItalic.woff') format('woff'),
@@ -240,11 +243,17 @@ ul#socialmedia {
 	}
 }
 
-#socialmedia a {
-	color: white;
+#socialmedia a .icon {
+	fill: white;
+	width: 30px;
 }
 
 #credit {
 	color: #999;
 	font-size: .8em;
+}
+
+.heart {
+	width: 12px;
+	
 }
