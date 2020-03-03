@@ -79,8 +79,22 @@ a {
 	text-decoration: none;
 	/*color: inherit;*/
 }
- button {
-	 border: 1px solid #1EAEDB;
+
+ .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+	border: 1px solid #1EAEDB;
+	background-color: #1EAEDB;
+	-webkit-transition: all .35s ease-in-out;
+	-o-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out;
+ }
+
+button#submit a {
+	color: white;
+}
+
+ .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+	background-color: #000000;
+	border: 1px solid #1EAEDB;
  }
 
 /*redirect to playfolio*/
@@ -127,7 +141,8 @@ footer .redirect {
 	position: absolute;
 	background:no-repeat top center fixed url("../img/background.jpg");
 	background-size: cover;
-	animation: fade-in 2s cubic-bezier(.47,.48,0,1);
+	-webkit-animation: fade-in 2s cubic-bezier(.47,.48,0,1);
+	        animation: fade-in 2s cubic-bezier(.47,.48,0,1);
 }
 
 .hero__text {
@@ -243,6 +258,15 @@ svg.logo {
 	}
   }
 
+  @-webkit-keyframes fade-in {
+	  from {
+		  opacity: 0;
+	  }
+	  to {
+		  opacity: 1;
+	  }
+  }
+
   @keyframes fade-in {
 	  from {
 		  opacity: 0;
@@ -297,9 +321,30 @@ svg.logo {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 }
+.service-list li::before {
+	content: ' - ';
+	width: 100px;
+	min-height: 30px;
+	background-color: #f1f1f1;
+	opacity: 50%;
+	background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+	background-repeat: repeat;
+    background-size: contain;
+    position: absolute;
+    top: -20px;
+    -webkit-box-shadow: 1px 0px 0 0 #7b7b7b;
+            box-shadow: 1px 0px 0 0 #7b7b7b;
+	color: #ffffff0d;
+	z-index: 999;
+	display: block;
+	-webkit-transform: translate(50%, 0px) rotate(2deg);
+	    -ms-transform: translate(50%, 0px) rotate(2deg);
+	        transform: translate(50%, 0px) rotate(2deg);
+}
 
 .service-list li {
 	font-family: 'Permanent Marker', cursive;
+	position: relative;
 	font-size: 20px;
 	padding: 0.7em;
 	-webkit-box-flex: 1;
@@ -308,15 +353,27 @@ svg.logo {
 	text-transform: capitalize;
     background: repeat #c4bdb0 url("/img/natural-paper.png");
 	margin: 1em;
-	-webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.68);
-	        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.68);
+	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+	        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
 }
+/* 
+.service-list li:hover {
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+} */
 
 @media screen and (min-width: 949px) {
 	.service-list li {
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 1 25%;
 		        flex: 0 1 25%;
+	}
+}
+
+@media screen and (min-width: 471px) and (max-width: 949px) {
+	.service-list li {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 33%;
+		        flex: 0 1 33%;
 	}
 }
 
