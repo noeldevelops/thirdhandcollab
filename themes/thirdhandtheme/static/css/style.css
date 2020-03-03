@@ -127,6 +127,7 @@ footer .redirect {
 	position: absolute;
 	background:no-repeat top center fixed url("../img/background.jpg");
 	background-size: cover;
+	animation: fade-in 2s cubic-bezier(.47,.48,0,1);
 }
 
 .hero__text {
@@ -160,8 +161,8 @@ div.logo {
 	margin: 1em auto 0;
 	width: 75%;
 	opacity: 0;
-	-webkit-animation: fade-slide-down 2s .5s ease-in-out forwards;
-	        animation: fade-slide-down 2s .5s ease-in-out forwards;
+	-webkit-animation: fade-slide-down 1.75s .5s ease-in-out forwards;
+	        animation: fade-slide-down 1.75s .5s ease-in-out forwards;
 }
 
 svg.logo {
@@ -169,8 +170,8 @@ svg.logo {
 }
 
 .hand, .nails {
-	-webkit-animation: wave 1s .5s ease-in-out 2 both;
-	        animation: wave 1s .5s ease-in-out 2 both;
+	-webkit-animation: wave .5s 1.25s ease-in-out 2 both;
+	        animation: wave .5s 1.25s ease-in-out 2 both;
 }
 
 @-webkit-keyframes wave {
@@ -179,7 +180,6 @@ svg.logo {
 		        transform-origin: left;
 		-webkit-transform: rotate(10deg);
 		        transform: rotate(10deg);
-
 	}
 	50% {
 		-webkit-transform-origin: left;
@@ -241,6 +241,15 @@ svg.logo {
 	  -webkit-transform: none;
 			  transform: none;
 	}
+  }
+
+  @keyframes fade-in {
+	  from {
+		  opacity: 0;
+	  }
+	  to {
+		  opacity: 1;
+	  }
   }
 
 .nails {
