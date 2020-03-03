@@ -111,7 +111,16 @@ footer .redirect {
 /*section class="hero" */
 
 .hero {
-	background: no-repeat top center fixed url("../img/background.jpg");
+	position: relative;
+}
+.hero::before {
+	content: "";
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	background:no-repeat top center fixed url("../img/background.jpg");
 	background-size: cover;
 }
 
@@ -141,14 +150,53 @@ footer .redirect {
 	padding-top: 2em;
 }
 
-.logo {
+div.logo {
 	display: block;
 	margin: 1em auto 0;
 	width: 75%;
+	opacity: 0;
+	animation: fade-slide-down 2s .5s ease-in-out forwards;
 }
 
+svg.logo {
+	overflow: overlay;
+}
+
+.hand, .nails {
+	animation: wave 1s .5s ease-in-out 2 both;
+}
+
+@keyframes wave {
+	0%{
+		transform-origin: left;
+		transform: rotate(10deg);
+
+	}
+	50% {
+		transform-origin: left;
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform-origin: left;
+		transform: rotate(10deg);
+	}
+
+}
+@keyframes fade-slide-down {
+	0% {
+	  opacity: 0;
+	  -webkit-transform: translateY(-4rem);
+			  transform: translateY(-4rem);
+	}
+	100% {
+	  opacity: 1;
+	  -webkit-transform: none;
+			  transform: none;
+	}
+  }
+
 .nails {
-	fill: #ffffff;
+	fill: #1EAEDB;
 }
 
 .intro__subtitle {
@@ -255,5 +303,5 @@ ul#socialmedia {
 
 .heart {
 	width: 12px;
-	
+
 }
