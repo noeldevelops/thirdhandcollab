@@ -42,13 +42,13 @@
 			<div class="container">
 				<div class="row">
 				<div class="twelve columns">
-					<p>Third Hand helps regular folk like yourself create an online presence that shows off your products, your skills, or just your bad-a&amp;$ blog posts. We're a web development studio with handmade roots, helping people reach audiences near and far, even if the budget is tight. We think your website deserves personal attention from experienced human professionals, and it shouldn't drain your rainy day fund.</p>
+					<h3>Third Hand helps regular folk like yourself create an online presence that shows off your products, your skills, or just your bad-a&amp;$ blog posts. We think your website deserves personal attention from experienced human professionals, and it shouldn't drain your rainy day fund.</h3>
 				</div>
 				</div>
 			</div>
 		</div>
 	</section><!-- .intro -->
-	<section class="services">
+	<section class="services colored">
 		<div class="container">
 			<div class="row">
 				<div class="twelve columns">
@@ -71,36 +71,36 @@
 		<div class="container">
 			<div class="row">
 				<div class="twelve columns">
-					<h4>Some of Our Work</h4>
+					<h4>Some of My Work</h4>
+					<span class="scroll">scroll right to see more</span><img class="icon-arrow" src="/img/icons/arrow-right.svg" alt="scroll right">
 				</div>
+				<div class="twelve columns portfolio">
 					{{ range where .Data.Pages "Section" "work" }}
-				<div class="portfolio-items five columns">
-					<a rel="noreferrer" target="_blank" href="{{.Params.sitelink}}">
+					<div class="portfolio-item twelve columns">
 						<img class="work-screenshot" src="{{.Params.img}}" alt="screenshot">
-					</a>
-					<!-- <p>{{.Summary}}</p> -->
-					<!-- <hr /> -->
+						<div class="portfolio-item__summary">{{.Summary}}</div>
+						<a rel="noreferrer" target="_blank" href="{{.Params.sitelink}}"><img class="icon-link" src="/img/icons/external-link-alt.svg" alt="Codepen Logo"></a>
+						<!-- <hr /> -->
+					</div>
+					{{ end }}
 				</div>
-
-    			{{ end }}
-
 			</div>
 		</div>
 	</section> <!-- .showcase -->
-	<section class="process">
+	<section class="process colored">
 		<div class="container">
 			<div class="row">
 				<div class="twelve columns">
 					<h4 id="contact-form">Get in Touch!</h4>
 					<p>We're committed to helping you create the website of your dreams. If you're ready to upgrade your online presence, simply fill out the Project Interest Form at the link below.</p>
+					<button id="submit"><a href="https://goo.gl/forms/tBJ0ER3UZFV9fZz42" target="_blank">Project Interest Form</a></button>
 					<h5>The Painless Process</h5>
 					<ol>
-						<li>You click the button &amp; tell me more about you and your project.</li>
-						<li>We schedule a time to discuss details.</li>
+						<li>You click the button above &amp; tell me more about you and your project.</li>
+						<li>We schedule a time to discuss the details.</li>
 						<li>I research and prepare a detailed proposal for your approval.</li>
-						<li>We work together to make your dream site real.</li>
+						<li>We work together to make your dream site real!</li>
 					</ol>
-					<button id="submit"><a href="https://goo.gl/forms/tBJ0ER3UZFV9fZz42" target="_blank">Project Interest Form</a></button>
 				</div>
 			</div>
 		</div>
@@ -132,9 +132,8 @@
 			<div class="row">
 				<div class="twelve columns">
 					<h4>About</h4>
-					<p>Third Hand Collaborative, LLC is a tiny company founded in 2017 by me, Noel Cothren. We work with clients from all over the US from our home base in Albuquerque, New Mexico, USA. My ever-growing coding skills plus years of experience in the arts, customer service, and education guide me in all aspects of running the business. </p>
-					<h5>Collaborative?!?</h5>
-					<p>For many website projects I work on my own, but I've curated a small community of collaborators that back me up when I need it. They are friends of mine &#8212; other creative professionals, all seriously dedicated to making great things with other humans. If you dig collaboration and digital craftsmanship and want to be a part of this community we're building, let me know!</p>
+					<p>Third Hand Collaborative, LLC is a tiny company founded in 2017 by me, Noel Cothren. For many projects I work on my own, but I've curated a small community of collaborators that back me up when I need it. I work with clients and agencies all over the USA from my home office in Albuquerque, New Mexico.</p>
+					<p>I’m currently seeking a full time development role with a collaborative remote team. Please <a href="mailto:noelcothren@gmail.com">reach out</a> if you'd like to work together. </p>
 				</div>
 			</div>
 		</div>
@@ -143,16 +142,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="twelve columns">
-					<section class="social">
+					<div class="social">
 						<ul id="socialmedia">
 							<li><a href="https://github.com/noeldevelops" target="_blank" alt="github"><img class="icon" src="/img/icons/github.svg" alt="GitHub Logo"></a></li>
 							<li><a href="https://www.linkedin.com/in/noel-cothren-8517bb16/" target="_blank" alt="linkedin"><img class="icon" src="/img/icons/linkedin-in.svg" alt="LinkedIn Logo"></a></li>
 							<li><a href="https://twitter.com/noeldevelops" target="_blank" alt="twitter"><img class="icon" src="/img/icons/twitter.svg" alt="Twitter Logo"></a></li>
 							<li><a href="https://codepen.io/noeldevelops" target="_blank" alt="codepen"><img class="icon" src="/img/icons/codepen.svg" alt="Codepen Logo"></a></li>
 						</ul>
-					</section>
+					</div>
 					<div class="twelve columns redirect">
-						Looking for more code? Check out my <a href="http://github.com/noeldevelops" target="_blank">github account</a> or <a href="http://noeldevelops.com" target="_blank">my <span class="redirect--playfolio-text">playfolio</span> at noeldevelops.com</a>
+						Looking for code? Check out my <a href="http://github.com/noeldevelops" target="_blank">github account</a> or <a href="http://noeldevelops.com" target="_blank">my <span class="redirect--playfolio-text">playfolio</span> at noeldevelops.com</a>
 					</div>
 						<p id="credit">This site was built for speed, with <img class="heart" src="/img/icons/heart.svg" alt="heart"> . . . and help from <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="http://getskeleton.com/" target="_blank"> Skeleton</a>.</p>
 				</div>
