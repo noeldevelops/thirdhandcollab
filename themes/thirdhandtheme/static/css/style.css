@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 /* Font Family = Noah. See details, incl Open Type features, here: https://www.fontfabric.com/fonts/noah/#Opentype-Features */
-
 @font-face {
     font-family: 'Noah';
 	font-style: bold;
@@ -69,16 +68,24 @@ body > * {
 	}
 }
 
+section {
+	margin-bottom: 3rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+section.colored, footer {
+	background-color: #000000;
+	background: repeat #000000 url("/img/axiom-pattern.png");
+    color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Noah', 'Gill Sans', sans-serif;
     font-style: bold;
     font-weight: 700;
  }
 
-a {
-	text-decoration: none;
-	/*color: inherit;*/
-}
 
  .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
 	border: 1px solid #1EAEDB;
@@ -90,6 +97,10 @@ a {
 
 button#submit a {
 	color: white;
+	text-decoration: none;
+}
+button#submit {
+	margin-bottom: 2rem;
 }
 
  .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
@@ -162,13 +173,6 @@ footer .redirect {
 	font-weight: 900;
 	line-height: 1.0;
 	padding-bottom: 1em;
-}
-
-/*section class="intro" */
-
-.intro {
-	background-color: inherit;
-	padding-top: 2em;
 }
 
 div.logo {
@@ -307,9 +311,26 @@ svg.logo {
 		font-size: 2.5em;
 	}
 }
+
+
+/*section class="intro" */
+
+.intro {
+	background-color: inherit;
+	padding-top: 2em;
+}
+
+.intro h3 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+
 /*section class="services"*/
+
 .service-list {
 	list-style: none;
+	text-align: center;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -325,9 +346,8 @@ svg.logo {
 	content: ' - ';
 	width: 100px;
 	min-height: 30px;
-	background-color: #f1f1f1;
+	background-color: #1EAEDB;
 	opacity: 50%;
-	background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 	background-repeat: repeat;
     background-size: contain;
     position: absolute;
@@ -344,6 +364,7 @@ svg.logo {
 
 .service-list li {
 	font-family: 'Permanent Marker', cursive;
+	color: #000;
 	position: relative;
 	font-size: 20px;
 	padding: 0.7em;
@@ -353,8 +374,8 @@ svg.logo {
 	text-transform: capitalize;
     background: repeat #c4bdb0 url("/img/natural-paper.png");
 	margin: 1em;
-	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
-	        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+	/* -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+	        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68); */
 }
 /* 
 .service-list li:hover {
@@ -378,26 +399,93 @@ svg.logo {
 }
 
 /*section class showcase */
-
-.portfolio-items {
-	padding: 1.5rem 1rem;
-	min-height: 350px;
+.portfolio {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: scroll;
+	padding: 1rem;
+	margin-bottom: 2rem;
 }
 
-.portfolio-items h5 >a {
+.portfolio-item {
+	padding: 1.5rem 1rem;
+	min-height: 350px;
+	margin: 1rem 2.5rem;
+	padding: 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	background-color: #c4bdb0;
+	background: repeat #c4bdb0 url("/img/natural-paper.png");
+	-webkit-box-shadow: 6px 6px 15px #666;
+	box-shadow: 6px 6px 15px #666;
+}
+
+.portfolio-item__summary p {
+	margin-top: 1rem;
+	font-weight: 900;
+}
+
+.portfolio-item  a {
 	color: black;
-	font-weight: 800;
+	/* font-weight: 400; */
+	text-decoration: underline;
+}
+
+.icon-link {
+	width: 20px;
+	display: inline-block;
 }
 
 .work-screenshot {
-	max-width: 100%;
-	-webkit-box-shadow: 6px 6px 15px #666;
-	        box-shadow: 6px 6px 15px #666;
+	max-width: 300px;
+	display: inline-block;
+	-webkit-box-shadow: 2px 2px 5px #666;
+	box-shadow: 2px 2px 5px #666;
+}
+
+.showcase h4 {
+	margin-bottom: 0;
+}
+
+.see-more {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+.scroll {
+	font-size: 1.2rem;
+	padding-right: 1rem;
+}
+.icon-arrow {
+	max-width: 20px;
+	-webkit-animation: fade-in 2s 1s ease-in-out infinite alternate;
+	        animation: fade-in 2s 1s ease-in-out infinite alternate;
 }
 
 /*education*/
 .education {
 	display: none;
+}
+
+/* process */
+.start-date {
+	font-size: 1.5rem;
+	font-style: italic;
 }
 
 /*footer */
