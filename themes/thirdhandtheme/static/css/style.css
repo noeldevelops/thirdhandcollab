@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 /* Font Family = Noah. See details, incl Open Type features, here: https://www.fontfabric.com/fonts/noah/#Opentype-Features */
-
 @font-face {
     font-family: 'Noah';
 	font-style: bold;
@@ -401,6 +400,8 @@ svg.logo {
 
 /*section class showcase */
 .portfolio {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	overflow: scroll;
 	padding: 1rem;
@@ -412,9 +413,16 @@ svg.logo {
 	min-height: 350px;
 	margin: 1rem 2.5rem;
 	padding: 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	background-color: #c4bdb0;
 	background: repeat #c4bdb0 url("/img/natural-paper.png");
 	-webkit-box-shadow: 6px 6px 15px #666;
@@ -449,9 +457,15 @@ svg.logo {
 }
 
 .see-more {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .scroll {
 	font-size: 1.2rem;
@@ -459,7 +473,8 @@ svg.logo {
 }
 .icon-arrow {
 	max-width: 20px;
-	animation: fade-in 2s 1s ease-in-out infinite alternate;
+	-webkit-animation: fade-in 2s 1s ease-in-out infinite alternate;
+	        animation: fade-in 2s 1s ease-in-out infinite alternate;
 }
 
 /*education*/
