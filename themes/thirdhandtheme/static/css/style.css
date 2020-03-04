@@ -75,8 +75,9 @@ section {
 	padding-bottom: 3rem;
 }
 
-section.colored {
+section.colored, footer {
 	background-color: #000000;
+	background: repeat #000000 url("/img/axiom-pattern.png");
     color: white;
 }
 
@@ -330,6 +331,7 @@ svg.logo {
 
 .service-list {
 	list-style: none;
+	text-align: center;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -347,7 +349,6 @@ svg.logo {
 	min-height: 30px;
 	background-color: #1EAEDB;
 	opacity: 50%;
-	background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 	background-repeat: repeat;
     background-size: contain;
     position: absolute;
@@ -374,8 +375,8 @@ svg.logo {
 	text-transform: capitalize;
     background: repeat #c4bdb0 url("/img/natural-paper.png");
 	margin: 1em;
-	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
-	        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+	/* -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68);
+	        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.68); */
 }
 /* 
 .service-list li:hover {
@@ -446,18 +447,30 @@ svg.logo {
 .showcase h4 {
 	margin-bottom: 0;
 }
+
+.see-more {
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 .scroll {
 	font-size: 1.2rem;
 	padding-right: 1rem;
 }
 .icon-arrow {
-	max-width: 25px;
-	animation: fade-in 2s ease-in-out infinite alternate;
+	max-width: 20px;
+	animation: fade-in 2s 1s ease-in-out infinite alternate;
 }
 
 /*education*/
 .education {
 	display: none;
+}
+
+/* process */
+.start-date {
+	font-size: 1.5rem;
+	font-style: italic;
 }
 
 /*footer */
