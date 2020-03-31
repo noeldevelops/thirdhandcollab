@@ -80,7 +80,7 @@
 				<div class="twelve columns portfolio">
 					{{ range where .Data.Pages "Section" "work" }}
 					<div class="portfolio-item twelve columns">
-						<img class="work-screenshot" src="{{.Params.img}}" alt="screenshot">
+						<img class="lazyload work-screenshot" data-src="{{.Params.img}}" alt="screenshot">
 						<div class="portfolio-item__summary">{{.Summary}}</div>
 						<a rel="noreferrer" target="_blank" href="{{.Params.sitelink}}"><img class="icon-link" src="/img/icons/external-link-alt.svg" alt="Codepen Logo"></a>
 						<!-- <hr /> -->
@@ -162,5 +162,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/lazysizes.min.js" async></script>
 	</body>
 </html>
