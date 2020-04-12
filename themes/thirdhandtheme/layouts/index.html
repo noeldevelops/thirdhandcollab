@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<div class="twelve columns portfolio">
-					{{ range where .Data.Pages "Section" "work" }}
+					{{ range where .Site.Pages "Section" "work" }}
 					<div class="portfolio-item twelve columns">
 						<img class="lazyload work-screenshot" data-src="{{.Params.img}}" alt="screenshot">
 						<div class="portfolio-item__summary">{{.Summary}}</div>
